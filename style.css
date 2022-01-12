@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+:root{
+    --primary-font-size: 1.5rem;
+    --secondary-font-size:1.2rem;
+}
+
+
 .background video{
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     object-fit: cover;
@@ -16,11 +22,12 @@
 }
 
 .overlay{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     background-color:rgb(102, 51, 153);
     mix-blend-mode: overlay;
     z-index: -2;
@@ -28,28 +35,44 @@
 
 #main{
     color: white;
-    height: 100vh;
     width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    font-size: var(--primary-font-size);
+    padding: 100px 20px;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+#main h1{
+    font-family: 'Poppins', sans-serif;;
+}
+
+#main p{
+    font-size: var(--secondary-font-size);
 }
 
 #survey-form{
-    border: 2px solid white;
+    /* border: 2px solid white; */
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    width: 80%;
+    padding: 50px;
+    width: 70%;
     margin: 20px;
+    background-color:rgba(102, 51, 153,0.5);
+    border-radius: 10px;
+    font-size: var(--secondary-font-size);
 }
 
 .form-control{
     padding: 10px;
     opacity: 0.7;
-    margin: 10px 0;
+    margin:10px 0 30px 0;
+    font-size: var(--secondary-font-size);
 }
 
 .form-control:hover{
@@ -61,6 +84,16 @@
     opacity: 1;
 }
 
+input[type="radio"]{
+    height: 20px;
+    width: 20px;
+}
+
+#submit{
+    padding: 10px;
+    font-size: var(--secondary-font-size);
+}
+
 .text-center{
     text-align: center;
 }
@@ -69,3 +102,22 @@
     text-align: justify;
 }
 
+@media (max-width:800px) {
+    
+    
+    #survey-form{
+        width: 90%;
+    }
+}
+
+@media (max-width:500px) {
+    :root{
+    --primary-font-size: 1.3rem;
+    --secondary-font-size:1.1rem;
+    }
+
+    #survey-form{
+        padding:20px 20px;
+        width: 100%;
+    }
+}
