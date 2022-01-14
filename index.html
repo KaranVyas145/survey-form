@@ -18,21 +18,22 @@
     <title>Survey Form</title>
   </head>
   <body>
-    <!-- <div class="background">
-      <video src="video/Pexels Videos 2022395.mp4" muted autoplay loop></video>
-      <div class="overlay"></div>
-    </div> -->
-    <!-- <div class="overlay"></div> -->
     <main id="main">
+      <!-- setting the video background -->
       <div class="background">
       <video src="video/Pexels Videos 2022395.mp4" muted autoplay loop></video>
+      <!-- To add an overlay on the video background  -->
       <div class="overlay"></div>
     </div>
+    <!-- Title -->
       <h1 id="title" class="text-center">Music Fest Survey Form</h1>
+      <!-- Description  -->
       <p id="description" class="text-center">
         Thank you for joining us for the Music Festival! PLease tell us about your expirience by filling up this form.
       </p>
+      <!-- The main form  -->
       <form action="" id="survey-form">
+        <!-- Name  -->
         <label for="name">Name:</label>
         <input
           type="text"
@@ -41,6 +42,7 @@
           id="name"
           placeholder="Enter Your Name"
         />
+        <!-- Email  -->
         <label for="email">Email:</label>
         <input
           type="email"
@@ -49,6 +51,7 @@
           id="email"
           placeholder="Enter Your Email"
         />
+        <!-- Age  -->
         <label for="age">Age</label>
         <input
           type="number"
@@ -59,6 +62,7 @@
           max="99"
           placeholder="Enter Your Age"
         />
+        <!-- Favorite Genre  -->
         <label for="dropdown">What is your favorite genre of music?</label>
         <select name="genre" id="dropdown" class="form-control" required>
           <option disabled selected>Select favorite genre</option>
@@ -68,6 +72,7 @@
           <option value="Country">Country</option>
           <option value="Hip Hop">Hip Hop</option>
         </select>
+        <!-- Experience  -->
         <label>Please rate your expirience.</label>
         <label for="five-star">
           <input
@@ -124,6 +129,7 @@
           />
           <i class="fa fa-star" aria-hidden="true"></i>
         </label>
+        <!-- Additional Comments  -->
         <label for="comments">Any additional comments or suggestions?</label>
         <textarea
           name="comments"
@@ -133,6 +139,7 @@
           placeholder="Enter your comments here....."
           class="form-control"
         ></textarea>
+        <!-- Submit  -->
         <input type="submit" value="Submit" id="submit" />
       </form>
     </main>
