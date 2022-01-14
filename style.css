@@ -4,12 +4,14 @@
     box-sizing: border-box;
 }
 
+/* Setting the font sizes as variables  */
 :root{
     --primary-font-size: 1.5rem;
     --secondary-font-size:1.2rem;
 }
 
 
+/* Setting the video background by making the position absolute, setting the height and width to 100%, adjusting the z index and opacity  */
 .background video{
     height: 100%;
     width: 100%;
@@ -21,26 +23,28 @@
     z-index: -4;
 }
 
+/* Adding a sort of filter like effect on the video background by having the similar position abilities to .background video and set a z index greater than it. The important attribute here is mix-blend-mode which is set to overlay */
 .overlay{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     background-color:rgb(102, 51, 153);
     mix-blend-mode: overlay;
     z-index: -2;
 }
 
+
+/* Here comes the main content with position set to absolute */
 #main{
     color: white;
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     position: absolute;
     top: 0;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     font-size: var(--primary-font-size);
@@ -48,16 +52,18 @@
     font-family: 'Spline Sans', sans-serif;
 }
 
+/* The main heading  */
 #main h1{
     font-family: 'Poppins', sans-serif;;
 }
 
+/* The description  */
 #main p{
     font-size: var(--secondary-font-size);
 }
 
+/* The main form with display set to flex the direction being column. The background color is set with 0.5 opacity with the same color as the one used in .overlay  */
 #survey-form{
-    /* border: 2px solid white; */
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -68,6 +74,8 @@
     font-size: var(--secondary-font-size);
 }
 
+
+/* Setting the basic css properties for input elements for the form. Added some padding and vertical margin. Set the opacity  */
 .form-control{
     padding: 10px;
     opacity: 0.7;
@@ -75,15 +83,12 @@
     font-size: var(--secondary-font-size);
 }
 
-.form-control:hover{
-    /* background-color: white; */
+
+.form-control:hover, .form-control:focus{
     opacity: 1;
 }
 
-.form-control:focus{
-    opacity: 1;
-}
-
+/* Increasing the size of the radio buttons  */
 input[type="radio"]{
     height: 20px;
     width: 20px;
@@ -98,12 +103,9 @@ input[type="radio"]{
     text-align: center;
 }
 
-.text-justify{
-    text-align: justify;
-}
 
+/* Added the media queries to make the page responsive  */
 @media (max-width:800px) {
-    
     
     #survey-form{
         width: 90%;
