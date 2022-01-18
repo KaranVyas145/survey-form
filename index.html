@@ -34,25 +34,27 @@
       <!-- The main form  -->
       <form action="" id="survey-form">
         <!-- Name  -->
-        <label for="name">Name:</label>
+        <label for="name" id="name-label">Name:</label>
         <input
           type="text"
           class="form-control"
           name="name"
           id="name"
           placeholder="Enter Your Name"
+          required
         />
         <!-- Email  -->
-        <label for="email">Email:</label>
+        <label for="email" id="email-label">Email:</label>
         <input
           type="email"
           class="form-control"
           name="email"
           id="email"
           placeholder="Enter Your Email"
+          required
         />
         <!-- Age  -->
-        <label for="age">Age</label>
+        <label for="age" id="number-label">Age</label>
         <input
           type="number"
           name="age"
@@ -72,6 +74,7 @@
           <option value="Country">Country</option>
           <option value="Hip Hop">Hip Hop</option>
         </select>
+       
         <!-- Experience  -->
         <label>Please rate your expirience.</label>
         <label for="five-star">
@@ -80,6 +83,7 @@
             name="rating"
             id="five-star"
             class="form-control"
+            value="5"
           />
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
@@ -93,6 +97,7 @@
             name="rating"
             id="four-star"
             class="form-control"
+            value="4"
           />
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
@@ -105,6 +110,7 @@
             name="rating"
             id="three-star"
             class="form-control"
+            value="3"
           />
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
@@ -116,6 +122,7 @@
             name="rating"
             id="two-star"
             class="form-control"
+            value="2"
           />
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
@@ -126,6 +133,7 @@
             name="rating"
             id="one-star"
             class="form-control"
+            value="1"
           />
           <i class="fa fa-star" aria-hidden="true"></i>
         </label>
