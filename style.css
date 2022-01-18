@@ -88,8 +88,8 @@
     opacity: 1;
 }
 
-/* Increasing the size of the radio buttons  */
-input[type="radio"]{
+/* Increasing the size of the radio buttons and checbox  */
+input[type="radio"], input[type="checkbox"]{
     height: 20px;
     width: 20px;
 }

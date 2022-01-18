@@ -84,6 +84,7 @@
             id="five-star"
             class="form-control"
             value="5"
+            required
           />
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
@@ -98,6 +99,7 @@
             id="four-star"
             class="form-control"
             value="4"
+            required
           />
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
@@ -111,6 +113,7 @@
             id="three-star"
             class="form-control"
             value="3"
+            required
           />
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
@@ -123,6 +126,7 @@
             id="two-star"
             class="form-control"
             value="2"
+            required
           />
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
@@ -134,9 +138,11 @@
             id="one-star"
             class="form-control"
             value="1"
+            required
           />
           <i class="fa fa-star" aria-hidden="true"></i>
         </label>
+        
         <!-- Additional Comments  -->
         <label for="comments">Any additional comments or suggestions?</label>
         <textarea
@@ -147,6 +153,16 @@
           placeholder="Enter your comments here....."
           class="form-control"
         ></textarea>
+
+        <!-- Futue Events -->
+        <label for="checkbox">
+          <input type="checkbox" name="notify" id="notify" value="yes-notify" class="form-control">
+          I'd like to be notified about the future events. (optional)
+        </label>
+        <label for="checkbox">
+          <input type="checkbox" name="notify" id="notify" value="yes-info" class="form-control" required>
+          The above filled information is correct. (required)
+        </label>
         <!-- Submit  -->
         <input type="submit" value="Submit" id="submit" />
       </form>
